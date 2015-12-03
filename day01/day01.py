@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def count_the_floor(input_data):
+def count_floor_and_basement(input_data):
     counter = 0
     basement = -1
     basement_found = False
@@ -14,13 +14,13 @@ def count_the_floor(input_data):
             basement_found = True
     return (counter, basement)
 
-def get_the_floor():
+def get_floor_and_first_basement():
     input_file = open('day01.txt', 'r')
     input_data = input_file.readline()
-    floor, basement = count_the_floor(input_data)
+    floor, basement = count_floor_and_basement(input_data)
     print 'Floor: %s\nBasement: %s' % (floor, basement)
 
 
 if __name__ == "__main__":
-    get_the_floor()
+    get_floor_and_first_basement()
 
