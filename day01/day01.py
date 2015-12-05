@@ -21,6 +21,6 @@ def get_floor_and_first_basement():
     print 'Floor: %s\nBasement: %s' % (floor, basement)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     get_floor_and_first_basement()
 

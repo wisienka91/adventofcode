@@ -49,6 +49,6 @@ def get_paper_and_ribbon_amount():
     print 'Paper amount needed: %s' % paper_amount
     print 'Ribbon amount needed: %s' % ribbon_amount
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     get_paper_and_ribbon_amount()
 

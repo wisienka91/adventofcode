@@ -25,5 +25,5 @@ def get_ideal_nonces():
     for condition in conditions:
         get_ideal_nonce(condition)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     get_ideal_nonces()
