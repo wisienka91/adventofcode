@@ -1,0 +1,4 @@
+self.rules
+for rule in rules:
+    if len(rule) == 3
+
