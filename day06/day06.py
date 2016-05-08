@@ -12,15 +12,10 @@ class Illumination(object):
         ]
 
     def sanitize_line(self, line):
-        trash = ['\n', ' through']
-        line = line.rstrip('\n')
-        line = line.replace(' through ', ',')
-        return line
+        return line.rstrip().replace(' through ', ',')
 
-
-    def get_instructions(self, line):
+    def extract_instruction(self, line):
         instruction = ''
-        positions = []
         sanitized_line = self.sanitize_line(line)
 
         for i in self.INSTRUCTIONS:
@@ -55,19 +50,19 @@ class Illumination(object):
                     self.light_grid[x][y][0] = 1 - self.light_grid[x][y][0]
                     self.light_grid[x][y][1] += 2
 
-    def apply_instructions(self, instructions):
-        coordinates = (instructions[1], instructions[2])
-        if instructions[0] == 'turn on ':
+    def apply_instruction(self, instruction):
+        coordinates = (instruction[1], instruction[2])
+        if instruction[0] == 'turn on ':
             self.change_state(coordinates, 'on')
-        elif instructions[0] == 'turn off ':
+        elif instruction[0] == 'turn off ':
             self.change_state(coordinates, 'off')
-        elif instructions[0] == 'toggle ':
+        elif instruction[0] == 'toggle ':
             self.change_state(coordinates, 'toggle')
 
     def apply_santa_directives(self, input_file):
         for line in input_file.readlines():
-            instructions = self.get_instructions(line)
-            self.apply_instructions(instructions)
+            instruction = self.extract_instruction(line)
+            self.apply_instruction(instruction)
 
     def count_lights_and_brightness(self):
         lights_on = 0
@@ -81,9 +76,12 @@ class Illumination(object):
 
     def get_lights_on_count(self):
         input_file = open('day06.txt', 'r')
+
         self.apply_santa_directives(input_file)
-        print 'There is %s lights on' % self.count_lights_and_brightness()[0]
-        print 'Brightnesses sum: %s' % self.count_lights_and_brightness()[1]
+
+        lights_on, brightness_sum = self.count_lights_and_brightness()
+        print 'There is %s lights on' % lights_on
+        print 'Brightnesses sum: %s' % brightness_sum
 
 if __name__ == '__main__':
     Illumination().get_lights_on_count()
