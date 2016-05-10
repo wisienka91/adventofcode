@@ -29,9 +29,9 @@ def get_count(input_file):
 
 def count_characters_without_decoded():
     input_file = open('day08.txt', 'r')
-    result = get_count(input_file)
-    print 'Characters without escaped literals: %s' % result[0]
-    print 'Characters encoded without characters: %s' % result[1]
+    escaped, nonescaped = get_count(input_file)
+    print 'Characters without escaped literals: %s' % escaped
+    print 'Characters encoded without characters: %s' % nonescaped
 
 if __name__ == '__main__':
     count_characters_without_decoded()
