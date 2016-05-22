@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import itertools
 
+
 def count_path(permutation, distances):
     general_distance = 0
     for i in range(len(permutation) - 1):
@@ -9,6 +10,7 @@ def count_path(permutation, distances):
             city_distance = distances.get((permutation[i+1], permutation[i]))
         general_distance += city_distance
     return general_distance
+
 
 def get_paths(cities, distances):
     shortest_path = None
@@ -25,9 +27,11 @@ def get_paths(cities, distances):
             longest_path = permutation
     return (shortest_path, short_length, longest_path, long_length)
 
+
 def get_distance_length(line):
     raw_distance = line.split()
     return {(raw_distance[0], raw_distance[2]): int(raw_distance[4])}
+
 
 def get_cities_and_distances(input_file):
     cities = []
@@ -40,6 +44,7 @@ def get_cities_and_distances(input_file):
             cities.append(line.split()[2])
         distances.update(distance)
     return (cities, distances)
+
 
 def get_shortest_path_length():
     input_file = open('day09.txt', 'r')

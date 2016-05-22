@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 def count_floor_and_basement(input_data):
     counter = 0
     basement = -1
@@ -13,6 +14,7 @@ def count_floor_and_basement(input_data):
             basement = i+1
             basement_found = True
     return (counter, basement)
+
 
 def get_floor_and_first_basement():
     input_file = open('day01.txt', 'r')

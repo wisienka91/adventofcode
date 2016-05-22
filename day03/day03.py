@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class GiftDeliverySystem(object):
 
     def __init__(self):
@@ -61,6 +62,7 @@ class GiftDeliverySystem(object):
         input_file = open('day03.txt', 'r')
         visited_houses_count = self.follow_two_paths(input_file.readline())
         print 'Visited houses: %s' % visited_houses_count
+
 
 if __name__ == '__main__':
     GiftDeliverySystem().count_santa_houses_alone()

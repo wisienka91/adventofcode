@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class LookAndSay(object):
 
     def analyze(self, output):
@@ -45,6 +46,7 @@ class LookAndSay(object):
             print 'Number length after %s iterations is %s.' % (
                 iterations, result
             )
+
 
 if __name__ == '__main__':
     LookAndSay().run()

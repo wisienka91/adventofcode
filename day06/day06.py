@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Illumination(object):
 
     COLUMNS = 1000
@@ -82,6 +83,7 @@ class Illumination(object):
         lights_on, brightness_sum = self.count_lights_and_brightness()
         print 'There is %s lights on' % lights_on
         print 'Brightnesses sum: %s' % brightness_sum
+
 
 if __name__ == '__main__':
     Illumination().get_lights_on_count()

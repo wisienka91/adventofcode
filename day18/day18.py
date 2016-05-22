@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Ilumination2(object):
 
     def __init__(self, steps):

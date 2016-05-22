@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import string
 
+
 class PasswordIterator(object):
 
     def __init__(self):
@@ -30,7 +31,6 @@ class PasswordIterator(object):
             if ch =='i' or ch == 'l' or ch == 'o':
                 return False
         return True
-
 
     def is_not_valid(self, next_pass):
         return not (
@@ -81,6 +81,7 @@ class PasswordIterator(object):
             next_pass = self.get_next_iteration(next_pass)
         print 'Next password would be %s.' % next_pass
         return next_pass
+
 
 if __name__ == '__main__':
     input_file = open('day11.txt', 'r')
