@@ -53,8 +53,8 @@ def sum_amounts(input_file):
 def get_paper_and_ribbon_amount():
     input_file = open('day02.txt', 'r')
     paper_amount, ribbon_amount = sum_amounts(input_file)
-    print 'Paper amount needed: %s' % paper_amount
-    print 'Ribbon amount needed: %s' % ribbon_amount
+    print('Paper amount needed: {0}'.format(paper_amount))
+    print('Ribbon amount needed: {0}'.format(ribbon_amount))
 
 
 if __name__ == '__main__':
