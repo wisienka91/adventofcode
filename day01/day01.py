@@ -20,7 +20,7 @@ def get_floor_and_first_basement():
     input_file = open('day01.txt', 'r')
     input_data = input_file.readline()
     floor, basement = count_floor_and_basement(input_data)
-    print 'Floor: %s\nBasement: %s' % (floor, basement)
+    print('Floor: {0}\nBasement: {1}'.format(floor, basement))
 
 
 if __name__ == '__main__':
