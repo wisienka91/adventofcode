@@ -5,9 +5,9 @@ import re
 def get_passports_data():
     passports = []
     passport = {}
-    passports_raw = open('day04.txt', 'r')
+    data_file = open('day04.txt', 'r')
 
-    for line in passports_raw.readlines():
+    for line in data_file.readlines():
         if line.strip():
             for raw_data in line.strip().split(" "):
                 data = raw_data.split(":")
@@ -16,7 +16,7 @@ def get_passports_data():
             passports.append(passport)
             passport = {}
 
-    passports_raw.close()
+    data_file.close()
     return passports
 
 

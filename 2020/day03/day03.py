@@ -3,11 +3,11 @@
 
 def get_the_map():
     world_map = []
-    map_file = open('day03.txt', 'r')
+    data_file = open('day03.txt', 'r')
 
-    for line in map_file.readlines():
+    for line in data_file.readlines():
         world_map.append(line.strip())
-    map_file.close()
+    data_file.close()
 
     return world_map
 

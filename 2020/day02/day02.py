@@ -15,11 +15,11 @@ def _parse_line(line):
 
 def _get_the_rules():
     rules = []
-    taskfile = open('day02.txt', 'r')
+    data_file = open('day02.txt', 'r')
 
-    for line in taskfile.readlines():
+    for line in data_file.readlines():
         rules.append(_parse_line(line))
-    taskfile.close()
+    data_file.close()
 
     return rules
 

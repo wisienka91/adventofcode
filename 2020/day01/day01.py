@@ -4,11 +4,11 @@ from itertools import combinations
 
 def _get_the_numbers():
     numbers = []
-    taskfile = open('day01.txt', 'r')
+    data_file = open('day01.txt', 'r')
 
-    for line in taskfile.readlines():
+    for line in data_file.readlines():
         numbers.append(int(line))
-    taskfile.close()
+    data_file.close()
 
     return numbers
 
